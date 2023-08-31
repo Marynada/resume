@@ -20,63 +20,35 @@
       <h2>Syntax:</h2>
       {{#with syntax}}
         <h3>Variables:
-          <ul>
-            {{#each variables}}
-              <li>
-                <span class='badge badge-primary'>
-                  {{this}}
-                </span>
-              </li>
-            {{/each}}
-          </ul>
+          <span class='badge bg-secondary'>
+            {{variables}}
+          </span>
         </h3>
 
         <h3>Functions:
-          <ul>
-            {{#each functions}}
-              <li>
-                <span
-                  class='badge badge-primary'
-                >{{this}}</span>
-              </li>
-            {{/each}}
-          </ul>
+          <span class='badge bg-secondary'>
+            {{functions}}
+          </span>
         </h3>
 
         <h3>Conditionals:
-          <ul>
-            {{#each conditionals}}
-              <li>
-                <span
-                  class='badge badge-primary'
-                >{{this}}</span>
-              </li>
-            {{/each}}
-          </ul>
+          <span class='badge bg-secondary'>
+            {{conditionals}}
+          </span>
         </h3>
 
         <h3>Loops:
-          <ul>
-            {{#each loops}}
-              <li>
-                <span
-                  class='badge badge-primary'
-                >{{this}}</span>
-              </li>
-            {{/each}}
-          </ul>
+          <span class='badge bg-secondary'>
+            {{loops}}
+          </span>
         </h3>
 
-        <h3>Classes:</h3>
-        <ul>
-          {{#each classes}}
-            <li>
-              <span
-                class='badge badge-primary'
-              >{{this}}</span>
-            </li>
-          {{/each}}
-        </ul>
+        <h3>Classes:
+          <span class='badge bg-secondary'>
+            {{classes}}
+          </span>
+        </h3>
+
       {{/with}}
     </section>
 
@@ -90,16 +62,42 @@
     </section>
 
     <section>
-      <h2>Libraries:</h2>
-      <ol>
-        {{#each libraries}}
-          <li>
-            <span class='badge badge-secondary'>
-              {{this}}
-            </span>
-          </li>
-        {{/each}}
-      </ol>
+      <h2>Libraries:
+          {{#each libraries}}
+              <span class='badge bg-primary'>
+                {{this}}
+              </span>
+          {{/each}}
+      </h2>
+    </section>
+
+    <section>
+      <h2>Tools:
+          {{#each tools}}
+              <span class='badge bg-primary'>
+                {{this}}
+              </span>
+          {{/each}}
+      </h2>
+    </section>
+
+    <section>
+      <h2>Community:
+        <ul>
+          {{#each community}}
+            <li>
+              <span class='badge bg-primary'>
+                Name:
+                {{name}}
+                <br />
+              <span class='badge bg-primary'>
+                Type:
+                {{type}}
+                <br />
+            </li>
+          {{/each}}
+        </ul>
+      </h2>
     </section>
 
   </div>
