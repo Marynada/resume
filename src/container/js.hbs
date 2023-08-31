@@ -1,0 +1,104 @@
+<div>
+  <div>
+    <section>
+      <h1> {{name}} </h1>
+      <p><em> {{description}} </em></p>
+      <h2>History:</h2>
+      <p><strong>Year:</strong> {{history/year}} </p>
+      <p><strong>Founder:</strong> {{history/founder}} </p>
+    </section>
+    <section>
+      <h2>Types:</h2>
+      <ul>
+        {{#each types}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Syntax:</h2>
+      {{#with syntax}}
+        <h3>Variables:
+          <span class='badge bg-secondary'>
+            {{variables}}
+          </span>
+        </h3>
+
+        <h3>Functions:
+          <span class='badge bg-secondary'>
+            {{functions}}
+          </span>
+        </h3>
+
+        <h3>Conditionals:
+          <span class='badge bg-secondary'>
+            {{conditionals}}
+          </span>
+        </h3>
+
+        <h3>Loops:
+          <span class='badge bg-secondary'>
+            {{loops}}
+          </span>
+        </h3>
+
+        <h3>Classes:
+          <span class='badge bg-secondary'>
+            {{classes}}
+          </span>
+        </h3>
+
+      {{/with}}
+    </section>
+
+    <section>
+      <h2>Features:</h2>
+      <ol>
+        {{#each features}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ol>
+    </section>
+
+    <section>
+      <h2>Libraries:
+          {{#each libraries}}
+              <span class='badge bg-primary'>
+                {{this}}
+              </span>
+          {{/each}}
+      </h2>
+    </section>
+
+    <section>
+      <h2>Tools:
+          {{#each tools}}
+              <span class='badge bg-primary'>
+                {{this}}
+              </span>
+          {{/each}}
+      </h2>
+    </section>
+
+    <section>
+      <h2>Community:
+        <ul>
+          {{#each community}}
+            <li>
+              <span class='badge bg-primary'>
+                Name:
+                {{name}}
+                <br />
+              <span class='badge bg-primary'>
+                Type:
+                {{type}}
+                <br />
+            </li>
+          {{/each}}
+        </ul>
+      </h2>
+    </section>
+
+  </div>
+</div>
