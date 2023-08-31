@@ -1,0 +1,106 @@
+<div>
+  <div>
+    <section>
+      <h1> {{name}} </h1>
+      <p><em> {{description}} </em></p>
+      <h2>History:</h2>
+      <p><strong>Year:</strong> {{history/year}} </p>
+      <p><strong>Founder:</strong> {{history/founder}} </p>
+    </section>
+    <section>
+      <h2>Types:</h2>
+      <ul>
+        {{#each types}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Syntax:</h2>
+      {{#with syntax}}
+        <h3>Variables:
+          <ul>
+            {{#each variables}}
+              <li>
+                <span class='badge badge-primary'>
+                  {{this}}
+                </span>
+              </li>
+            {{/each}}
+          </ul>
+        </h3>
+
+        <h3>Functions:
+          <ul>
+            {{#each functions}}
+              <li>
+                <span
+                  class='badge badge-primary'
+                >{{this}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        </h3>
+
+        <h3>Conditionals:
+          <ul>
+            {{#each conditionals}}
+              <li>
+                <span
+                  class='badge badge-primary'
+                >{{this}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        </h3>
+
+        <h3>Loops:
+          <ul>
+            {{#each loops}}
+              <li>
+                <span
+                  class='badge badge-primary'
+                >{{this}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        </h3>
+
+        <h3>Classes:</h3>
+        <ul>
+          {{#each classes}}
+            <li>
+              <span
+                class='badge badge-primary'
+              >{{this}}</span>
+            </li>
+          {{/each}}
+        </ul>
+      {{/with}}
+    </section>
+
+    <section>
+      <h2>Features:</h2>
+      <ol>
+        {{#each features}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ol>
+    </section>
+
+    <section>
+      <h2>Libraries:</h2>
+      <ol>
+        {{#each libraries}}
+          <li>
+            <span class='badge badge-secondary'>
+              {{this}}
+            </span>
+          </li>
+        {{/each}}
+      </ol>
+    </section>
+
+  </div>
+</div>
