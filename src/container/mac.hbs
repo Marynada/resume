@@ -132,12 +132,14 @@
                 <strong>count:</strong>
                 {{count}}
                 <br />
-                <strong>features:</strong>
-                <ul>
-                  {{#each features}}
-                    <li>{{this}}</li>
-                  {{/each}}
-                </ul>
+                {{#if features}}
+                  <strong>features:</strong>
+                  <ul>
+                    {{#each features}}
+                      <li>{{this}}</li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
               </li>
             {{/each}}
           </ul>
