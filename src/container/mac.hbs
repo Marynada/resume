@@ -1,0 +1,208 @@
+<div>
+  <section>
+    <h1> {{name}} </h1>
+    <p><em> {{description}} </em></p>
+    <p><strong>Price:</strong> {{price}} </p>
+    <p><strong>Category:</strong> {{category}} </p>
+  </section>
+  <hr />
+  <section>
+    <h4>Features</h4>
+    <ol>
+      {{#with features}}
+        <li>
+          <strong>Processor:</strong>
+          <ul>
+            {{#with processor}}
+              <li>
+                <strong>brand:</strong>
+                {{brand}}
+              </li>
+              <li>
+                <strong>model:</strong>
+                {{model}}
+              </li>
+              <li>
+                <strong>speed:</strong>
+                {{speed}}
+              </li>
+              <li>
+                <strong>cores:</strong>
+                {{cores}}
+              </li>
+              <li>
+                <strong>cache:</strong>
+                {{cache}}
+              </li>
+            {{/with}}
+          </ul>
+        </li>
+        <li>
+          <strong>Memory:</strong>
+          <ul>
+            {{#with memory}}
+              <li>
+                <strong>type:</strong>
+                {{type}}
+              </li>
+              <li>
+                <strong>size:</strong>
+                {{size}}
+              </li>
+              <li>
+                <strong>speed:</strong>
+                {{speed}}
+              </li>
+            {{/with}}
+          </ul>
+        </li>
+        <li>
+          <strong>Storage:</strong>
+          <ul>
+            {{#with storage}}
+              <li>
+                <strong>type:</strong>
+                {{type}}
+              </li>
+              <li>
+                <strong>size:</strong>
+                {{size}}
+              </li>
+            {{/with}}
+          </ul>
+        </li>
+        <li>
+          <strong>Display:</strong>
+          <ul>
+            {{#with display}}
+              <li>
+                <strong>size:</strong>
+                {{size}}
+              </li>
+              <li>
+                <strong>resolution:</strong>
+                {{resolution}}
+              </li>
+              <li>
+                <strong>technology:</strong>
+                {{technology}}
+              </li>
+              <li>
+                <strong>color space:</strong>
+                {{color_space}}
+              </li>
+              <li>
+                <strong>brightness:</strong>
+                {{brightness}}
+              </li>
+              <li>
+                <strong>refresh rate:</strong>
+                {{refresh_rate}}
+              </li>
+            {{/with}}
+          </ul>
+        </li>
+        <li>
+          <strong>Graphics:</strong>
+          <ul>
+            {{#with graphics}}
+              <li>
+                <strong>brand:</strong>
+                {{brand}}
+              </li>
+              <li>
+                <strong>model:</strong>
+                {{model}}
+              </li>
+              <li>
+                <strong>memory:</strong>
+                {{memory}}
+              </li>
+            {{/with}}
+          </ul>
+        </li>
+        <li>
+          <strong>Ports:</strong>
+          <ul>
+            {{#each ports}}
+              <li>
+                <strong>type:</strong>
+                {{type}}
+                <br />
+                <strong>count:</strong>
+                {{count}}
+                <br />
+                <strong>features:</strong>
+                <ul>
+                  {{#each features}}
+                    <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              </li>
+            {{/each}}
+          </ul>
+        </li>
+        <li>
+          <strong>Battery:</strong>
+          <ul>
+            {{#with battery}}
+              <li>
+                <strong>type:</strong>
+                {{type}}
+              </li>
+              <li>
+                <strong>capacity:</strong>
+                {{capacity}}
+              </li>
+              <li>
+                <strong>life:</strong>
+                {{life}}
+              </li>
+            {{/with}}
+          </ul>
+        </li>
+        <li>
+          <strong>Weight:</strong>
+          {{weight}}
+        </li>
+        <li>
+          <strong>Dimensions:</strong>
+          <ul>
+            {{#with dimensions}}
+              <li>
+                <strong>height:</strong>
+                {{height}}
+              </li>
+              <li>
+                <strong>width:</strong>
+                {{width}}
+              </li>
+              <li>
+                <strong>depth:</strong>
+                {{depth}}
+              </li>
+            {{/with}}
+          </ul>
+        </li>
+        <li>
+          <strong>Operating system:</strong>
+          {{operating_system}}
+        </li>
+        <li>
+          <strong>Accessories:</strong>
+          <ul>
+            {{#each accessories}}
+              <li>
+                <strong>name:</strong>
+                {{name}}
+                <br />
+                <strong>price:</strong>
+                {{price}}
+              </li>
+            {{/each}}
+          </ul>
+        </li>
+      {{/with}}
+    </ol>
+  </section>
+</div>
