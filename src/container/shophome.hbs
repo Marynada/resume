@@ -1,6 +1,174 @@
-<main>
-  <div>
+<main class='mt-5'>
+  {{! NAVIGATION }}
+  <div class='card'>
+    <div class='nav'>
+      <a href='#' class='nav-link'>
+        Home
+      </a>
+      {{#each navigation.links}}
+        <div class='nav-item'>
+          {{#if disabled}}
+            <a href='{{href}}' class='nav-link disabled'>
+              {{text}}
+            </a>
+          {{else}}
+            <a href='{{href}}' class='nav-link'>
+              {{text}}
+            </a>
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  {{! NAVIGATION }}
 
+  {{! NEWSBLOCK }}
+  <div class='text-center mt-5'>
+    <h1>{{newsBlock.title}}</h1>
   </div>
 
+  <div class='row'>
+    {{#each newsBlock.cards}}
+      <div class='col-3'>
+        <div class='card text-bg-dark my-1'>
+          <h5 class='card-title'>
+            {{title}}
+            {{#if isTop}}
+              <span
+                class='badge text-bg-danger rounded-pill'
+              >
+                Топ
+              </span>
+            {{/if}}
+            {{#if isNew}}
+              <span
+                class='badge text-bg-success rounded-pill'
+              >
+                Нова
+              </span>
+            {{/if}}
+          </h5>
+          <hr />
+          <div class='card-body'>
+            <p>{{description}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  {{! NEWSBLOCK }}
+
+  <hr />
+
+  {{! GOODSBLOCK }}
+  <div class='nav nav-tabs'>
+    {{#each goodsBlock.tabs}}
+      {{#if isActive}}
+        <li class='nav-item col-2'>
+          <a class='nav-link active text-center' href='#'>
+            {{text}}
+          </a>
+        </li>
+      {{else}}
+        <li class='nav-item col-2'>
+          <a class='nav-link disabled text-center' href='#'>
+            {{text}}
+          </a>
+        </li>
+      {{/if}}
+    {{/each}}
+  </div>
+  <br />
+  <div class='row'>
+    {{#each goodsBlock.cards}}
+      <div class='col-4 mb-3'>
+        <div class='card'>
+          <img class='card-img-top' src={{image}} />
+          <div class='card-body'>
+            <h5 class='card-title'>
+              {{title}}
+              {{#if isHot}}
+                <span
+                  class='badge text-bg-warning rounded-pill'
+                >
+                  HOT!
+                </span>
+              {{/if}}
+              {{#if isNew}}
+                <span
+                  class='badge text-bg-primary rounded-pill'
+                >
+                  Нове
+                </span>
+              {{/if}}
+            </h5>
+            <p class='card-text'>
+              {{description}}
+            </p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  {{! GOODSBLOCK }}
+
+  <hr class='mb-5' />
+
+  {{! SUBSCRIBE }}
+  <div class='card text-bg-dark'>
+    <div class='card-body'>
+      {{#with subscribe}}
+        <h2>{{header}}</h2>
+        <p>{{description}}</p>
+        {{#each buttons}}
+          <a href={{link}} class='btn btn-primary mb-1'>
+            {{text}}
+          </a>
+          <br />
+        {{/each}}
+      {{/with}}
+    </div>
+  </div>
+  {{! SUBSCRIBE }}
+
+  <hr class='m-5' />
+
+  {{! SERVICE }}
+  <div class='card text-bg-success'>
+    <div class='card-body text-center'>
+      {{#with service}}
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+        {{#each buttons}}
+          <a href={{link}} class='btn btn-primary mb-1'>
+            {{text}}
+          </a>
+        {{/each}}
+      {{/with}}
+    </div>
+  </div>
+  {{! SERVICE }}
+
+  <hr class='m-5' />
+
+  {{! FOOTER }}
+    <div class="row">
+      {{#each footer}}
+        <div class="col-2">
+          <ul class="nav flex-column">
+            {{#each this}}
+              {{#if isActive}}
+                <li class="nav-item active">
+              {{else}}
+                <li class="nav-item {{#if isDisabled}}disabled{{/if}}">
+              {{/if}}
+                <a class="nav-link {{#if isDisabled}}text-muted{{/if}}" href="{{link}}">{{text}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/each}}
+    </div>
+  {{! FOOTER }}
 </main>

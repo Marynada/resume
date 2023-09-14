@@ -1513,6 +1513,7 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Help',
           href: 'https://www.youtube.com/',
+          disabled: true,
         },
       ],
     },
@@ -1693,14 +1694,17 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Trending',
           link: 'https://www.youtube.com/feed/trending',
+          isActive: true,
         },
         {
           text: 'Subscriptions',
           link: 'https://www.youtube.com/feed/subscriptions',
+          isActive: true,
         },
         {
           text: 'Library',
           link: 'https://www.youtube.com/feed/library',
+          isDisabled: true,
         },
       ],
       [
@@ -1711,14 +1715,17 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Your Videos',
           link: 'https://www.youtube.com/feed/my_videos',
+          isActive: true,
         },
         {
           text: 'Live',
           link: 'https://www.youtube.com/live',
+          isActive: true,
         },
         {
           text: 'Settings',
           link: 'https://www.youtube.com/account',
+          isDisabled: true,
         },
       ],
       [
@@ -1729,14 +1736,17 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Liked Videos',
           link: 'https://www.youtube.com/playlist?list=LL',
+          isActive: true,
         },
         {
           text: 'Music',
           link: 'https://www.youtube.com/music',
+          isActive: true,
         },
         {
           text: 'Gaming',
           link: 'https://www.youtube.com/gaming',
+          isDisabled: true,
         },
       ],
       [
@@ -1747,14 +1757,17 @@ router.get('/shophome', function (req, res) {
         {
           text: 'News',
           link: 'https://www.youtube.com/news',
+          isActive: true,
         },
         {
           text: 'Fashion & Beauty',
           link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+          isActive: true,
         },
         {
           text: 'Learning',
           link: 'https://www.youtube.com/learning',
+          isDisabled: true,
         },
       ],
       [
@@ -1765,14 +1778,17 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Help',
           link: 'https://support.google.com/youtube/?hl=en',
+          isActive: true,
         },
         {
           text: 'Send Feedback',
           link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+          isActive: true,
         },
         {
           text: 'About',
           link: 'https://www.youtube.com/about/',
+          isDisabled: true,
         },
       ],
     ],
