@@ -227,11 +227,13 @@
       <div class='col-3'>
         <ul class='list-unstyled'>
           {{#each footer.navigation}}
-            <li>
-              <a href='{{this.href}}'>
-                {{this.text}}
-              </a>
-            </li>
+            <div class='my-1'>
+              <li>
+                <a href='{{this.href}}'>
+                  {{this.text}}
+                </a>
+              </li>
+            </div>
           {{/each}}
         </ul>
       </div>
@@ -239,15 +241,17 @@
       <div class='col-3'>
         <ul class='list-unstyled'>
           {{#each footer.socialMedia}}
-            <li>
-              <a
-                class='btn btn-outline-dark'
-                href='{{link}}'
-                role='button'
-              >
-                {{name}}
-              </a>
-            </li>
+            <div class='my-1'>
+              <li>
+                <a
+                  class='btn btn-outline-dark'
+                  href='{{link}}'
+                  role='button'
+                >
+                  {{name}}
+                </a>
+              </li>
+            </div>
           {{/each}}
         </ul>
       </div>
@@ -255,15 +259,17 @@
       <div class='col-3'>
         <ul class='list-unstyled'>
           {{#each footer.partners}}
-            <li>
-              <a
-                class='btn btn-outline-info'
-                href='{{link}}'
-                role='button'
-              >
-                {{name}}
-              </a>
-            </li>
+            <div class='my-1'>
+              <li>
+                <a
+                  class='btn btn-outline-info'
+                  href='{{link}}'
+                  role='button'
+                >
+                  {{name}}
+                </a>
+              </li>
+            </div>
           {{/each}}
         </ul>
       </div>
