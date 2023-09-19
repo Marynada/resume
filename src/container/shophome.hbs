@@ -152,22 +152,24 @@
   <hr class='m-5' />
 
   {{! FOOTER }}
-    <div class="row">
-      {{#each footer}}
-        <div class="col-2">
-          <ul class="nav flex-column">
-            {{#each this}}
-              {{#if isActive}}
-                <li class="nav-item active">
-              {{else}}
-                <li class="nav-item {{#if isDisabled}}disabled{{/if}}">
-              {{/if}}
-                <a class="nav-link {{#if isDisabled}}text-muted{{/if}}" href="{{link}}">{{text}}</a>
-              </li>
-            {{/each}}
-          </ul>
-        </div>
-      {{/each}}
-    </div>
+  <div class='row'>
+    {{#each footer}}
+      <div class='col-2'>
+        <ul class='nav flex-column'>
+          {{#each this}}
+            {{#if isActive}}
+              <a href='{{link}}' class='nav-link'>
+                {{text}}
+              </a>
+            {{else}}
+              <a href='{{link}}' class='nav-link disabled'>
+                {{text}}
+              </a>
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+  </div>
   {{! FOOTER }}
 </main>

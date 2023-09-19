@@ -1690,6 +1690,7 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Home',
           link: 'https://www.youtube.com/',
+          isActive: true,
         },
         {
           text: 'Trending',
@@ -1711,6 +1712,7 @@ router.get('/shophome', function (req, res) {
         {
           text: 'History',
           link: 'https://www.youtube.com/feed/history',
+          isActive: true,
         },
         {
           text: 'Your Videos',
@@ -1732,6 +1734,7 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Watch Later',
           link: 'https://www.youtube.com/playlist?list=WL',
+          isActive: true,
         },
         {
           text: 'Liked Videos',
@@ -1753,6 +1756,7 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Sports',
           link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+          isActive: true,
         },
         {
           text: 'News',
@@ -1774,6 +1778,7 @@ router.get('/shophome', function (req, res) {
         {
           text: 'Report History',
           link: 'https://www.youtube.com/feed/history/report_history',
+          isActive: true,
         },
         {
           text: 'Help',
@@ -2070,14 +2075,17 @@ router.get('/shoporder', function (req, res) {
         {
           text: 'Home',
           link: 'https://www.youtube.com/',
+          isActive: true,
         },
         {
           text: 'Trending',
           link: 'https://www.youtube.com/feed/trending',
+          isActive: true,
         },
         {
           text: 'Subscriptions',
           link: 'https://www.youtube.com/feed/subscriptions',
+          isActive: true,
         },
         {
           text: 'Library',
@@ -2089,14 +2097,17 @@ router.get('/shoporder', function (req, res) {
         {
           text: 'History',
           link: 'https://www.youtube.com/feed/history',
+          isActive: true,
         },
         {
           text: 'Your Videos',
           link: 'https://www.youtube.com/feed/my_videos',
+          isActive: true,
         },
         {
           text: 'Live',
           link: 'https://www.youtube.com/live',
+          isActive: true,
         },
         {
           text: 'Settings',
@@ -2108,14 +2119,17 @@ router.get('/shoporder', function (req, res) {
         {
           text: 'Watch Later',
           link: 'https://www.youtube.com/playlist?list=WL',
+          isActive: true,
         },
         {
           text: 'Liked Videos',
           link: 'https://www.youtube.com/playlist?list=LL',
+          isActive: true,
         },
         {
           text: 'Music',
           link: 'https://www.youtube.com/music',
+          isActive: true,
         },
         {
           text: 'Gaming',
@@ -2127,14 +2141,17 @@ router.get('/shoporder', function (req, res) {
         {
           text: 'Sports',
           link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+          isActive: true,
         },
         {
           text: 'News',
           link: 'https://www.youtube.com/news',
+          isActive: true,
         },
         {
           text: 'Fashion & Beauty',
           link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+          isActive: true,
         },
         {
           text: 'Learning',
@@ -2146,14 +2163,17 @@ router.get('/shoporder', function (req, res) {
         {
           text: 'Report History',
           link: 'https://www.youtube.com/feed/history/report_history',
+          isActive: true,
         },
         {
           text: 'Help',
           link: 'https://support.google.com/youtube/?hl=en',
+          isActive: true,
         },
         {
           text: 'Send Feedback',
           link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+          isActive: true,
         },
         {
           text: 'About',
