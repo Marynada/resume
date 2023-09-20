@@ -1,0 +1,223 @@
+<main>
+  {{! NAVIGATION }}
+  <div class='card mt-5'>
+    <div class='nav'>
+      <a href='#' class='nav-link'>
+        Home
+      </a>
+      {{#each navigation.links}}
+        <div class='nav-item'>
+          {{#if disabled}}
+            <a href='{{href}}' class='nav-link disabled'>
+              {{text}}
+            </a>
+          {{else}}
+            <a href='{{href}}' class='nav-link'>
+              {{text}}
+            </a>
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  {{! NAVIGATION }}
+
+  {{! HEADER }}
+  <div class='mt-5'>
+    {{#with header}}
+      <h1>{{title}}</h1>
+      <a
+        class='btn btn-outline-secondary'
+        href='{{button.link}}'
+        role='button'
+      >
+        {{button.text}}
+      </a>
+    {{/with}}
+  </div>
+  {{! HEADER }}
+
+  <hr class='my-5 mt-5' />
+
+  {{! GOODSBLOCK }}
+  <div>
+    {{#each goodsBlock}}
+      <div class='card mb-3'>
+        <div class='row g-0'>
+          <div class='col-2'>
+            <img src='{{this.image}}' />
+          </div>
+
+          <div class='col-4'>
+            <div class='card-body'>
+              <h5 class='card-title'>{{this.name}}</h5>
+              <p class='card-text'>{{this.description}}</p>
+            </div>
+          </div>
+
+          <div class='col-2'>
+            <div class='card-body'>
+              {{#with price}}
+                <p class='card-text'>
+                  {{this.title}}:
+                  <br />
+                  {{this.value}}</p>
+              {{/with}}
+            </div>
+          </div>
+
+          <div class='col-2'>
+            <div class='card-body'>
+              <p class='card-text'>{{this.amount}}</p>
+            </div>
+          </div>
+
+          <div class='col-2'>
+            <div class='card-body'>
+              {{#each this.buttons}}
+                <div class='mt-2'>
+                  {{#if this.isPrimary}}
+                    <button class='btn btn-primary'>
+                      {{this.text}}
+                    </button>
+                  {{else if this.isDanger}}
+                    <button class='btn btn-outline-danger'>
+                      {{this.text}}
+                    </button>
+                  {{/if}}
+                </div>
+              {{/each}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  {{! GOODSBLOCK }}
+
+  <hr class='my-5 mt-5' />
+
+  {{! TOTAL }}
+  <div class='row mt-5'>
+    <div class='col-12'>
+      {{#with total}}
+        <h4>{{title}}</h4>
+        <p class='display-6'>{{amount}}</p>
+        <p>{{delivery}}</p>
+        <div class='mt-3'>
+          {{#each buttons}}
+            {{#if this.isSuccess}}
+              <a
+                href='{{this.link}}'
+                class='btn btn-success mb-1'
+              >
+                {{this.text}}
+              </a>
+            {{/if}}
+            <br />
+            {{#if this.isOutline}}
+              <a
+                href='{{this.link}}'
+                class='btn btn-outline-success mb-1'
+              >
+                {{this.text}}
+              </a>
+            {{/if}}
+          {{/each}}
+        </div>
+      {{/with}}
+    </div>
+  </div>
+  {{! TOTAL }}
+
+  <hr class='my-5 mt-5' />
+
+  {{! GOODSOTHERBLOCK }}
+  <div class='row'>
+    {{#with goodsOtherBlock}}
+      <div class='text-center'>
+        <h1>{{title}}</h1>
+      </div>
+      {{#each cards}}
+        <div class='col-4'>
+          <div class='card'>
+            <img class='card-img-top' src='{{image}}' />
+
+            <h5 class='card-title'>
+              {{title}}
+              {{#if isHot}}
+                <span
+                  class='badge text-bg-warning rounded-pill'
+                >
+                  HOT!
+                </span>
+              {{/if}}
+              {{#if isNew}}
+                <span
+                  class='badge text-bg-info rounded-pill'
+                >
+                  Нова
+                </span>
+              {{/if}}
+            </h5>
+            <div class='card-body'>
+              <p>{{description}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{/with}}
+  </div>
+  {{! GOODSOTHERBLOCK }}
+
+  <hr class='my-5 mt-5' />
+
+  {{! SUBSCRIBE }}
+  <div class='card'>
+    {{#with subscribe}}
+      <h2 class='card-header text-bg-dark'>
+        <div>{{header}}</div>
+      </h2>
+      <div class='card-body text-bg-dark'>
+        <p>{{description}}</p>
+        {{#each buttons}}
+          <a
+            class='btn btn-info'
+            href='{{link}}'
+            role='button'
+          >
+            {{text}}
+          </a>
+          <br />
+          <br />
+        {{/each}}
+      </div>
+    {{/with}}
+  </div>
+  {{! SUBSCRIBE }}
+
+  <hr class='my-5 mt-5' />
+
+  {{! FOOTER }}
+  <div class='row'>
+    {{#each footer}}
+      <div class='col-2'>
+        <ul class='nav flex-column'>
+          {{#each this}}
+            {{#if isActive}}
+              <a href='{{link}}' class='nav-link'>
+                {{text}}
+              </a>
+            {{else}}
+              <a href='{{link}}' class='nav-link disabled'>
+                {{text}}
+              </a>
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+  </div>
+  {{! FOOTER }}
+</main>
